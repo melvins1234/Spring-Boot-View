@@ -7,19 +7,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.rakutech.entities.User;
-import com.rakutech.services.BookService;
+import com.rakutech.rakutech.entities.User;
+import com.rakutech.rakutech.services.UserService;
 
 @SpringBootApplication
-@ComponentScan(basePackages = { "com.rakutech.controller"} )
+//@ComponentScan(basePackages = { "com.rakutech.controller"} )
 public class RakutechApplication {
-//    @Autowired
-//    private static BookService bookService;
 	public static void main(String[] args) {
 		SpringApplication.run(RakutechApplication.class, args);
-		
-//		List<Book> books = bookService.list();
-//		System.out.println(books.size());
 	}
 
 }

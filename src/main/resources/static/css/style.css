@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ProximaNova';
-  src: url("font/ProximaNova-Regular.woff2") format("woff2"), url("font/ProximaNova-Regular.woff") format("woff");
+  src: url("/font/ProximaNova-Regular.woff2") format("woff2"), url("/font/ProximaNova-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url("font/ProximaNova-Bold.woff2") format("woff2"), url("font/ProximaNova-Bold.woff") format("woff");
+  src: url("/font/ProximaNova-Bold.woff2") format("woff2"), url("/font/ProximaNova-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url("font/ProximaNova-Thin.woff2") format("woff2"), url("font/ProximaNova-Thin.woff") format("woff");
+  src: url("/font/ProximaNova-Thin.woff2") format("woff2"), url("/font/ProximaNova-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -24,7 +24,7 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url("font/ProximaNova-Light.woff2") format("woff2"), url("font/ProximaNova-Light.woff") format("woff");
+  src: url("/font/ProximaNova-Light.woff2") format("woff2"), url("/font/ProximaNova-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -32,7 +32,7 @@
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url("font/ProximaNova-Semibold.woff2") format("woff2"), url("font/ProximaNova-Semibold.woff") format("woff");
+  src: url("/font/ProximaNova-Semibold.woff2") format("woff2"), url("/font/ProximaNova-Semibold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -357,7 +357,7 @@ mark {
   height: 22px;
 }
 
-@-webkit-keyframes move-arrow-to-store {
+/*@-webkit-keyframes move-arrow-to-store {
   from {
     .header__main-nav__arrow-guide i {
       left: 14px;
@@ -381,7 +381,7 @@ mark {
       left: 115px;
     }
   }
-}
+}*/
 
 .breadcrumbs {
   background: #F6F7F8;
