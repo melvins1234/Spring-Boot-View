@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-import com.rakutech.entities.Book;
+import com.rakutech.entities.User;
 import com.rakutech.services.BookService;
 
 @SpringBootApplication
