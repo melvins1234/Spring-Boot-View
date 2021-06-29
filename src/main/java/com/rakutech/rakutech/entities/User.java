@@ -9,19 +9,27 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user")
 public class User {
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false, unique = true, length = 65)
+//	@Column(nullable = false, unique = true, length = 65)
 	private String email;
 	
-	@Column(nullable = false, length = 65)
+//	@Column(nullable = false, length = 65)
 	private String password;
 	
-	@Column(nullable = false, length = 65)
-	private String fullname;
+	private String fullName;
 	
+	public User() {}
+	
+	public User(Long id, String email, String password, String fullName) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.fullName = fullName;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -40,16 +48,16 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getfullname() {
-		return fullname;
+	public String getfullName() {
+		return fullName;
 	}
-	public void setfullname(String fullname) {
-		this.fullname = fullname;
+	public void setfullName(String fullName) {
+		this.fullName = fullName;
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullname=" + fullname + "]";
+		return "User [id=" + id + ", email=" + email + ", password=" + password + ", fullName=" + fullName + "]";
 	}
-	
+
 	
 }
