@@ -17,29 +17,40 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
-
+	
+	@RequestMapping("/")
+	public String viewHomePage(Model model) {
+		List<User> userList = userService.list();
+		model.addAttribute("listUsers", userList);
+	    return "index";
+	}
+	
 	@RequestMapping("/signup")
 	public String signup(Model model) {
 		User user = new User();
-		model.addAttribute(user);
+//		model.addAttribute("user", user);
+//		System.out.println(user);
 		return "signup";
 	}
 	
-	@RequestMapping("/")
-	public String viewHomePage() {
-//	    List<User> listUsers = userService.list();
-//	    listUsers.forEach(e -> {
-//	    	System.out.println(e.getfullName());
-//	    });
-//	    model.addAttribute("listUsers", listUsers);
-	     
-	    return "index";
+	@RequestMapping("/signin")
+	public String signin(Model model) {
+		User user = new User();
+		model.addAttribute("user", user);
+		return "signin";
 	}
 	
 	@RequestMapping(value = "/save", method = RequestMethod.POST)
 	public String saveUser(@ModelAttribute("user") User user) {
-		System.out.println(user);
-//		userService.save(user);
+//		System.out.println(user);
+		userService.save(user);
+	    return "redirect:/";
+	}
+	
+	@RequestMapping(value="/get", method = RequestMethod.POST)
+	public String loginUser(@ModelAttribute("user") User user) {
+		System.out.println(userService.getByEmail(user.getEmail()));
+		
 	    return "redirect:/";
 	}
 	

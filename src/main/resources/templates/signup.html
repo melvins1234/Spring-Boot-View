@@ -48,16 +48,16 @@
                     <form id="signup-submit" action="#" th:action="@{/save}" th:object="${user}" method="post">
                         <div class="sign-up__input-group">
                             <label for="fullName">Full Name</label>
-                            <input type="text" th:field="*{fullName}" th:name="fullName" id="fullName" required="">
+                            <input type="text" field="fullName" name="fullName" id="fullName" required="">
                         </div>
                         <div class="sign-up__input-group">
                             <label for="email">Email</label>
-                            <input type="email" th:field="*{email}" th:name="email" id="email" required="">
+                            <input type="email" field="email" name="email" id="email" required="">
                             <span class="sign-up__invalid-feedback">Email address already in use.</span>
                         </div>
                         <div class="sign-up__input-group">
                             <label for="password">Password</label>
-                            <input type="password" th:field="*{password}" th:name="password" id="password"
+                            <input type="password" field="password" name="password" id="password"
                                 placeholder="Must be at least 6 characters" required="">
                             <i class="far fa-eye" id="togglePassword"></i>
                         </div>

@@ -23,5 +23,17 @@ public class UserService {
 	public void save(User user) {
 		userRepository.save(user);
 	}
+	
+	public User get(long id) {
+		return userRepository.findById(id).get();
+	}
+	
+	public void delete(long id) {
+		userRepository.deleteById(id);
+	}
+	
+	public User getByEmail(String email) {
+		return userRepository.findByEmailAddress(email);
+	}
 
 }
